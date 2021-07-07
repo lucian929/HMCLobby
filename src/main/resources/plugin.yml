@@ -1,0 +1,7 @@
+name: HMCLobby
+version: ${project.version}
+main: me.raindropz.mc.hmclobby.HMCLobby
+api-version: 1.16
+authors: [ Raindropz ]
+description: Lobby plugin for HibiscusMC
+website: https://hibiscusmc.com
