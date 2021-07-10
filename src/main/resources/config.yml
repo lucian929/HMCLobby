@@ -12,6 +12,10 @@
 # Do not change version #. This is for internal use.
 version: 1.0-SNAPSHOT
 
+
+# Play a sound on wheat break.
+play-wheat-break-sound: true
+
 first-join-motd: "&6Welcome, %player_name%!"
 
 join-motd: "&7Welcome, %player_name%!"

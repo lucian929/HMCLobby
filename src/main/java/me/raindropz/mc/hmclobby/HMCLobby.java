@@ -20,6 +20,6 @@ public final class HMCLobby extends JavaPlugin {
     @Override
     public void onDisable() {
         saveDefaultConfig();
-        Bukkit.getConsoleSender().sendMessage("HMCLobby version: " + getConfig().getString("version") + "by Raindropz is now disabled.");
+        Bukkit.getConsoleSender().sendMessage("HMCLobby version: " + getConfig().getString("version") + " by Raindropz is now disabled.");
     }
 }
