@@ -11,3 +11,7 @@
 
 # Do not change version #. This is for internal use.
 version: 1.0-SNAPSHOT
+
+first-join-motd: "&6Welcome, %player_name%!"
+
+join-motd: "&7Welcome, %player_name%!"
