@@ -8,25 +8,19 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class FirstJoinEvent implements Listener {
-
     private final HMCLobby plugin;
     public FirstJoinEvent(HMCLobby plugin) { this.plugin = plugin; }
     @EventHandler
-
-    public void onWheatBreak(PlayerJoinEvent event) {
-
+    public void MOTDManager(PlayerJoinEvent event) {
         Player p = event.getPlayer();
-        String firstJoinMOTD = plugin.getConfig().getString("first-join-motd");
-        firstJoinMOTD = PlaceholderAPI.setPlaceholders(event.getPlayer(), firstJoinMOTD);
-
-        String joinMOTD = plugin.getConfig().getString("join-motd");
-        joinMOTD = PlaceholderAPI.setPlaceholders(event.getPlayer(), joinMOTD);
-
-        if(!p.hasPlayedBefore()) {
-            p.sendMessage(firstJoinMOTD);
-        }
-        if(p.hasPlayedBefore()) {
+        if (p.hasPlayedBefore()) {
+            String joinMOTD = plugin.getConfig().getString("join-motd");
+            joinMOTD = PlaceholderAPI.setPlaceholders(event.getPlayer(), joinMOTD);
             p.sendMessage(joinMOTD);
+        } else {
+            String firstJoinMOTD = plugin.getConfig().getString("first-join-motd");
+            firstJoinMOTD = PlaceholderAPI.setPlaceholders(event.getPlayer(), firstJoinMOTD);
+            p.sendMessage(firstJoinMOTD);
         }
     }
 }

@@ -12,6 +12,7 @@
 # Do not change version #. This is for internal use.
 version: 1.0-SNAPSHOT
 
+disable-wheat-drops: true
 
 # Play a sound on wheat break.
 play-wheat-break-sound: true
